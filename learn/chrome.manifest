@@ -1,0 +1,28 @@
+#######################################################################
+#
+# https://developer.mozilla.org/en/docs/Chrome_Registration
+#
+# basic types of chrome providers:
+#       Content
+#       Locale
+#       Skin
+#
+# useage : locale packagename localename path/to/files
+#          type   packagename localename path/to/files
+#
+# content packagename uri/to/files/ [flags] URI : chrome://packagename/content/
+# locale packagename localename uri/to/files/ [flags] URI : chrome://packagename/locale/
+#
+#
+#
+#
+#
+#######################################################################
+
+content TurnOfftheLights chrome/content/
+content TurnOfftheLights chrome/content/ contentaccessible=yes
+overlay chrome://browser/content/browser.xul chrome://TurnOfftheLights/content/browser.xul
+
+locale    TurnOfftheLights   zh-CN			chrome/locale/zh-CN/
+
+style chrome://global/content/customizeToolbar.xul chrome://TurnOfftheLights/content/css/toolbar-button.css
