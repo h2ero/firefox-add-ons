@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>122750707@qq.com</em:id>
+    <!--
+    whether the extension requires its files be unpacked into a directory
+        Binary XPCOM components
+        Plugins
+        Search plugins
+        DLLs loaded with ctypes
+        Dictionaries
+        Window icons
+    -->
+    <em:unpack>true</em:unpack>
+    <em:version>0.0.1</em:version>
+	<em:iconURL>chrome://learn/content/icons/icon48.png</em:iconURL>
+	<em:icon64URL>chrome://learn/content/icons/icon64.png</em:icon64URL>
+	<em:optionsURL>chrome://learn/content/option.xul</em:optionsURL>
+    <!-- 
+        2 	Extensions
+        4 	Themes
+        8 	Locale
+        32 	Multiple Item Package
+        64 	Spell check dictionary
+    -->
+    <em:type>2</em:type>
+    <!--
+        1   Opens optionsURL in a dialog box
+        2   Options are displayed inside the Add-on Manager
+        3   Opens optionsURL in a new tab (if the application supports that), or a dialog box
+    -->
+    <em:optionsType>3</em:optionsType>
+	
+    <em:targetApplication>
+      <Description>
+      <!-- 
+        GUID is xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx, where each x stands for a hexadecimal digit 
+      -->
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97385}</em:id>
+        <em:minVersion>16.0</em:minVersion>
+        <em:maxVersion>20.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:targetPlatform>Linux</em:targetPlatform>
+   
+    <em:name>extension name</em:name>
+    <em:description>extension description</em:description>
+    <em:creator>h2ero</em:creator>
+    <em:homepageURL>http://blog.h2ero.cn</em:homepageURL>
+	<em:localized>
+		<Description>
+			<em:locale>zh-CN</em:locale>
+			<em:name>扩展名称</em:name>
+			<em:description>描述</em:description>
+		</Description>
+	</em:localized>
+  </Description>      
+</RDF>
